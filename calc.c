@@ -9,9 +9,9 @@ while (1)
 {
 ctr++;
 printf ("Select a task to perform");
-printf ("\n1-Addition\n2-Subtraction\n3-Multiplication\n4-Division");
+printf ("\n1-Addition\n2-Subtraction\n3-Multiplication\n4-Division\n");
 scanf ("%d",&i);
-if (ctr!=1)
+if (ctr!=1&&(i<=4&&i>=1))
 {
 printf ("enter the second number");
 scanf ("%d",&b);
@@ -44,7 +44,7 @@ goto end;
 break;
 }
 }
-printf ("\nans=%d",c);
+printf ("\nans=%d\n",c);
 a=c;
 }
 end:
