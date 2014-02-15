@@ -1,5 +1,5 @@
 # include <stdio.h>
-#include<math.h>
+#include <math.h>
 void main()
 {
 	float a,b,c;
@@ -9,14 +9,15 @@ void main()
 	while (1)
 	{
 		printf ("Select a task to perform");	/*9-11 Giving the user a choice of options*/
-		printf ("\n1-Addition\n2-Subtraction\n3-Multiplication\n4-Division\n5-mod\n6-logarithm\n7-power\nAny other number to exit\n");
+		printf ("\n1-Addition\n2-Subtraction\n3-Multiplication\n4-Division"
+			"\n5-mod\n6-logarithm\n7-power\nAny other number to exit\n");
 		scanf ("%d",&i);
-		if (i<=7&&i>=1)	/*12-14 if user selects an appropriate choice he is asked for another number*/
+		if (i<=7&&i>=1)	/*15-19 if user selects an appropriate choice he is asked for another number*/
 		{
 			printf ("enter the second number\n");
 			scanf ("%f",&b);
 		}
-		switch (i)		/*17-43 performing task chosen by user*/
+		switch (i)		/*17-56 performing task chosen by user*/
 		{
 			case 1 :
 			{
@@ -39,14 +40,20 @@ void main()
 				break;
 			}
 			case 5:
+			{
 				c=(int)a%(int)b;
 				break;
+			}
 			case 6:
+			{
 				c=log(a)/log(b);
 				break;
+			}
 			case 7:
+			{
 				c=pow(a,b);
 				break;
+			}
 			default :
 			{
 				goto end;
