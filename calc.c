@@ -1,22 +1,21 @@
 # include <stdio.h>
 void main()
 {
-int a,b,c,i,ctr;
-ctr=0;
-printf ("Enter two numbers");
-scanf ("%d,%d",&a,&b);
+float a,b,c;
+int i;
+printf ("Enter first number\n");	/*5-6 Inputing a number from user*/
+scanf ("%f",&a);
 while (1)
 {
-ctr++;
-printf ("Select a task to perform");
-printf ("\n1-Addition\n2-Subtraction\n3-Multiplication\n4-Division\n");
+printf ("Select a task to perform");	/*9-11 Giving the user a choice of options*/
+printf ("\n1-Addition\n2-Subtraction\n3-Multiplication\n4-Division\nAny other number to exit\n");
 scanf ("%d",&i);
-if (ctr!=1&&(i<=4&&i>=1))
+if (i<=4&&i>=1)	/*12-14 if user selects an appropriate choice he is asked for another number*/
 {
-printf ("enter the second number");
-scanf ("%d",&b);
+printf ("enter the second number\n");
+scanf ("%f",&b);
 }
-switch (i)
+switch (i)		/*17-43 performing task chosen by user*/
 {
 case 1 :
 {
@@ -44,10 +43,10 @@ goto end;
 break;
 }
 }
-printf ("\nans=%d\n",c);
-a=c;
+printf ("\nans=%f\n",c); /*printing the answer*/
+a=c;	/*Assigning answer to the first number and the whole process is repeated*/
 }
 end:
-printf ("end");
+printf ("\n");
 }
 
